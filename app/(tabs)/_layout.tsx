@@ -1,0 +1,5 @@
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { colors } from '@/constants/theme';
+const icons:Record<string,any>={index:'grid-outline',metadata:'create-outline',listing:'images-outline',review:'people-outline',checklist:'checkmark-done-outline',validate:'shield-checkmark-outline'};
+export default function TabsLayout(){return <Tabs screenOptions={({route})=>({headerStyle:{backgroundColor:colors.navy},headerTintColor:colors.text,tabBarStyle:{backgroundColor:colors.panel,borderTopColor:colors.line},tabBarActiveTintColor:colors.blue,tabBarInactiveTintColor:colors.muted,tabBarIcon:({color,size})=><Ionicons name={icons[route.name]} color={color} size={size}/>})}><Tabs.Screen name="index" options={{title:'Overview'}}/><Tabs.Screen name="metadata" options={{title:'Metadata'}}/><Tabs.Screen name="listing" options={{title:'Listing'}}/><Tabs.Screen name="review" options={{title:'Review'}}/><Tabs.Screen name="checklist" options={{title:'Checklist'}}/><Tabs.Screen name="validate" options={{title:'Validate'}}/></Tabs>;}
