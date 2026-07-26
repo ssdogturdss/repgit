@@ -1,0 +1,5 @@
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { colors, spacing } from '@/constants/theme';
+export function ReadinessCard({score,errors}:{score:number;errors:number}) { const ready=errors===0; return <View style={styles.card}><Text style={styles.eyebrow}>LOCAL RELEASE READINESS</Text><View style={styles.row}><Text style={styles.score}>{score}%</Text><View><Text style={[styles.status,{color:ready?colors.mint:colors.amber}]}>{ready?'READY TO HAND OFF':'NEEDS ATTENTION'}</Text><Text style={styles.copy}>{ready?'Package passes local checks.':'Resolve blocking requirements before export.'}</Text></View></View></View>; }
+const styles=StyleSheet.create({card:{backgroundColor:colors.panelAlt,borderRadius:18,padding:spacing(2),marginBottom:spacing(2)},eyebrow:{color:colors.blue,fontWeight:'700',fontSize:11,letterSpacing:1},row:{flexDirection:'row',alignItems:'center',gap:18,marginTop:8},score:{fontSize:44,color:colors.text,fontWeight:'800'},status:{fontSize:15,fontWeight:'800'},copy:{color:colors.muted,marginTop:4,fontSize:13}});
