@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1020" />
+    <meta name="description" content="LaunchPilot local iOS build orchestration simulation." />
+    <title>LaunchPilot — iOS delivery control plane</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">✦</div>
+          <div><strong>LaunchPilot</strong><span>iOS delivery control plane</span></div>
+        </div>
+        <nav id="navigation" class="navigation"></nav>
+        <div class="sidebar-footer">
+          <span class="mode-dot" aria-hidden="true"></span>
+          <div><strong>Local simulation</strong><small>Safe demo environment</small></div>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <button id="mobile-menu" class="icon-button mobile-menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+          <div id="breadcrumb" class="breadcrumb">Overview</div>
+          <div class="topbar-right"><span class="environment-label">DEMO MODE</span><span id="clock" class="clock"></span></div>
+        </header>
+        <main id="main-content" tabindex="-1" class="content"></main>
+      </div>
+    </div>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <div id="modal-root"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
