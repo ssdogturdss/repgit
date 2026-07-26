@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "StoreFlow",
+    "slug": "storeflow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "storeflow",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#08152B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.synthetic.solutions.storeflow",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "StoreFlow uses your photo library only to attach App Store screenshots to your local submission package."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#08152B"
+      },
+      "package": "com.synthetic.solutions.storeflow"
+    },
+    "plugins": ["expo-router", "expo-image-picker", "expo-document-picker"],
+    "experiments": { "typedRoutes": true }
+  }
+}
